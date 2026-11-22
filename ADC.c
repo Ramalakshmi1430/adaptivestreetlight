@@ -13,9 +13,9 @@ void Init_ADC(void)
 }
 void Read_ADC(u8  chNo,u16 *dVal,f32 *eAR)
 {
-	//claer any prev channel selection
+	//clear any prev channel selection
 	ADCR &= 0XFFFFFF00;
-	//updtae on reg channel selection
+	//update on reg channel selection
 	//start sample for adc conversion
 	ADCR |=(1<<ADC_CONV_START_BIT) |(1<< chNo);
 	//wait for convo time
